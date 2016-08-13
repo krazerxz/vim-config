@@ -142,8 +142,7 @@ set shortmess+=A
 set smarttab
 set spelllang=en_gb
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l\ of\ %L,col=%c%V%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
-set t_Co=256                            " Set 256 colour mode
-set tabstop=2                           " Make a tab = 2 spaces
+set tabstop=2
 set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
@@ -496,6 +495,7 @@ let g:ragtag_global_maps = 1
 " ----------------------------------------------
 
 " Enable omni completion.
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#CompleteCpp
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -511,7 +511,7 @@ autocmd FileType text,markdown let b:vcm_tab_complete = 'dict'
 autocmd FileType ruby,elixir let b:vcm_tab_complete = 'tags'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsExpandTrigger = "<C-x>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
@@ -602,7 +602,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
-
 
 
 " ----------------------------------------------
