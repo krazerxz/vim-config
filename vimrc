@@ -52,12 +52,13 @@ Plug 'tpope/vim-surround'                                     " Quick editing or
 Plug 'wellle/targets.vim'                                     " Add lots of extra text objects for brachets, quotes, args and more
 
 " Snippets and autocomplete
-Plug 'ervandew/supertab'                                      " Make tab more useful in triggering Vim omni-complete
-Plug 'SirVer/ultisnips'                                       " Add snippet expantion for all kinds of template formats
-Plug 'honza/vim-snippets'                                     " Add many popular shared snippets
-Plug 'tpope/vim-endwise'                                      " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
-Plug 'tpope/vim-ragtag'                                       " Provide bindings for closing HTML/XML tags
-Plug 'ajh17/VimCompletesMe'                                   " Very lightweight completion helper
+Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
+Plug 'SirVer/ultisnips'                      " Add snippet expantion for all kinds of template formats
+Plug 'honza/vim-snippets'                    " Add many popular shared snippets
+Plug 'tpope/vim-endwise'                     " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
+Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
+Plug 'Shougo/neocomplete'                    " Autocomplete based on tags
+
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
@@ -506,9 +507,53 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" Setup autocompletion lookups for VimCompletesMe
-autocmd FileType text,markdown let b:vcm_tab_complete = 'dict'
-autocmd FileType ruby,elixir let b:vcm_tab_complete = 'tags'
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+      \ 'default' : ''
+    \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<C-x>"
