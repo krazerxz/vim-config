@@ -15,6 +15,8 @@ If you are using zsh there may be an issue running tests with ,t (it can't find 
 ```
 more details here: http://vim.1045645.n5.nabble.com/MacVim-and-PATH-td3388705.html#a3392363
 
+*PS*: Neovim specific improvements are on the `neovim` branch
+
 
 ## External Dependencies
 There are a couple of things you need to install to get the best out of this config:
