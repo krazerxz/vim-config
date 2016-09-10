@@ -484,13 +484,15 @@ let g:ragtag_global_maps = 1
 " ----------------------------------------------
 
 " Enable omni completion.
-autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType c setlocal omnifunc=ccomplete#CompleteCpp
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType c setlocal omnifunc=ccomplete#CompleteCpp
 
 " Setup autocompletion lookups for VimCompletesMe
 autocmd FileType text,markdown let b:vcm_tab_complete = 'dict'
