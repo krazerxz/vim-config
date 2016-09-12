@@ -137,7 +137,8 @@ set shortmess+=A
 set smarttab
 set spelllang=en_gb
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l\ of\ %L,col=%c%V%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
-set tabstop=2
+set t_Co=256                            " Set 256 colour mode
+set tabstop=2                           " Make a tab = 2 spaces
 set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
