@@ -104,8 +104,8 @@ let mapleader = " "
 
 " Comma has been the leader key for so long, emulate it being the leader still
 " for the sake of muscle memory
-nmap , <leader>
-nmap ,, <leader><leader>
+map , <leader>
+map ,, <leader><leader>
 
 
 " Set our primary colorscheme. Override this in ~/.vim.local if you want.
