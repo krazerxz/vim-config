@@ -51,6 +51,7 @@ Plug 'tpope/vim-surround'                                     " Quick editing or
 Plug 'wellle/targets.vim'                                     " Add lots of extra text objects for brachets, quotes, args and more
 
 " Snippets and autocomplete
+Plug 'ervandew/supertab'                                      " Make tab more useful in triggering Vim omni-complete
 Plug 'SirVer/ultisnips'                                       " Add snippet expantion for all kinds of template formats
 Plug 'honza/vim-snippets'                                     " Add many popular shared snippets
 Plug 'tpope/vim-endwise'                                      " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
