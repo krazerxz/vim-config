@@ -18,26 +18,26 @@ if has("gui_running")
     set background=dark
 endif
 
-hi Normal                     guifg=#FAFAFA ctermfg=231  guibg=#151718 ctermbg=NONE gui=NONE cterm=NONE
+hi Normal                     guifg=#FAFAFA ctermfg=231  guibg=#090909 ctermbg=NONE gui=NONE cterm=NONE
 hi Visual                     guifg=NONE    ctermfg=NONE guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
-hi LineNr                     guifg=#535969 ctermfg=240  guibg=#212426 ctermbg=235  gui=NONE cterm=NONE
+hi LineNr                     guifg=#535969 ctermfg=240  guibg=#161616 ctermbg=233  gui=NONE cterm=NONE
 hi Cursor                     guifg=#FAFAFA ctermfg=231  guibg=#646464 ctermbg=241  gui=NONE cterm=NONE
 hi CursorLine                 guifg=NONE    ctermfg=NONE guibg=#242424 ctermbg=235  gui=NONE cterm=NONE
 hi CursorLineNr               guifg=#F0F040 ctermfg=227  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
-hi Search                     guifg=#151718 ctermfg=233  guibg=#FFC423 ctermbg=220  gui=ITALIC,BOLD cterm=NONE
-hi MatchParen                 guifg=#FFC423 ctermfg=220  guibg=#151718 ctermbg=233  gui=BOLD cterm=BOLD
-hi SignColumn                 guifg=#FAFAFA ctermfg=231  guibg=#212426 ctermbg=235  gui=NONE cterm=NONE
-hi VertSplit                  guifg=#212426 ctermfg=235  guibg=#212426 ctermbg=235  gui=NONE cterm=NONE
+hi Search                     guifg=#090909 ctermfg=232  guibg=#FFC423 ctermbg=220  gui=ITALIC,BOLD cterm=NONE
+hi MatchParen                 guifg=#FFC423 ctermfg=220  guibg=#090909 ctermbg=232  gui=BOLD cterm=BOLD
+hi SignColumn                 guifg=#FAFAFA ctermfg=231  guibg=#161616 ctermbg=233  gui=NONE cterm=NONE
+hi VertSplit                  guifg=#161616 ctermfg=233  guibg=#161616 ctermbg=233  gui=NONE cterm=NONE
 hi NonText                    guifg=#3C414C ctermfg=238  gui=BOLD cterm=BOLD
 hi SpecialKey                 guifg=#3C414C ctermfg=238  guibg=#FF9800 ctermbg=208  gui=BOLD cterm=BOLD
 hi RedundantSpaces            guifg=NONE    ctermfg=NONE guibg=#FD3F44 ctermbg=203  gui=NONE cterm=NONE
 hi BadSpaces                  guifg=#3C414C ctermfg=238  guibg=#FF9800 ctermbg=208  gui=NONE cterm=NONE
 hi StatusLine                 guifg=#FAFAFA ctermfg=238  guibg=#3C414C ctermbg=231  gui=NONE cterm=NONE
-hi StatusLineNC               guifg=#212426 ctermfg=235  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
+hi StatusLineNC               guifg=#161616 ctermfg=233  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi PMenu                      guifg=#FAFAFA ctermfg=231  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi PMenuSbar                  guifg=NONE    ctermfg=NONE guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi PMenuSel                   guifg=#FAFAFA ctermfg=231  guibg=#1887FD ctermbg=33   gui=NONE cterm=NONE
-hi PMenuThumb                 guifg=#151718 ctermfg=233  guibg=#1887FD ctermbg=33   gui=NONE cterm=NONE
+hi PMenuThumb                 guifg=#090909 ctermfg=232  guibg=#1887FD ctermbg=33   gui=NONE cterm=NONE
 hi StartifyBracket            guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
 hi StartifyPath               guifg=#1887FD ctermfg=33   gui=NONE cterm=NONE
 hi StartifySlash              guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
@@ -57,7 +57,7 @@ hi bufExplorerSortBy          guifg=#60D05C ctermfg=77   gui=NONE cterm=NONE
 hi ctrlsfFilename             guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi ctrlsfCuttingLine          guifg=#FFC423 ctermfg=220  gui=NONE cterm=NONE
 hi ctrlsfLnumMatch            guifg=#60D05C ctermfg=77   gui=NONE cterm=NONE
-hi ctrlsfMatch                guifg=#151718 ctermfg=233  guibg=#FFC423 ctermbg=220  gui=NONE cterm=NONE
+hi ctrlsfMatch                guifg=#090909 ctermfg=232  guibg=#FFC423 ctermbg=220  gui=NONE cterm=NONE
 hi GitGutterAdd               guifg=#33FF33 ctermfg=83   guibg=#115511 ctermbg=22   gui=NONE cterm=NONE
 hi GitGutterAddLine           guifg=NONE    ctermfg=NONE guibg=#063806 ctermbg=22   gui=NONE cterm=NONE
 hi GitGutterChange            guifg=#FFFF33 ctermfg=227  guibg=#757500 ctermbg=100  gui=NONE cterm=NONE
