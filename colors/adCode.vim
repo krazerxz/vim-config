@@ -50,6 +50,8 @@ hi NERDTreeCWD                guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi NERDTreeDir                guifg=#1887FD ctermfg=33   gui=NONE cterm=NONE
 hi NERDTreeDirSlash           guifg=#1887FD ctermfg=33   gui=NONE cterm=NONE
 hi NERDTreeUp                 guifg=#2FC3FF ctermfg=39   gui=NONE cterm=NONE
+hi NERDTreeOpenable           guifg=#00A787 ctermfg=36   gui=NONE cterm=NONE
+hi NERDTreeClosable           guifg=#008787 ctermfg=30   gui=NONE cterm=NONE
 hi bufExplorerCurFile         guifg=#2FC3FF ctermfg=39   gui=NONE cterm=NONE
 hi bufExplorerAltBuf          guifg=#1887FD ctermfg=33   gui=NONE cterm=NONE
 hi bufExplorerHelp            guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
