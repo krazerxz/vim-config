@@ -239,6 +239,9 @@ command! Qa :qa
 " make Y consistent with C and D
 nnoremap Y y$
 
+" Add jk as an escape sequence
+imap jk <esc>
+
 " <leader>. to view all document buffers
 nmap <silent> <unique> <Leader>. :BufExplorer<CR>
 
