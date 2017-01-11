@@ -406,7 +406,7 @@ map <C-w>s :vsplit<CR>
 " C-w S to horizontal split
 map <C-w>S :split<CR>
 
-" C-H and C-L to jump left and right between splits
+" C-h and C-l to jump left and right between splits
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
@@ -417,11 +417,6 @@ map <C-k> <C-w>k
 let g:yankstack_map_keys = 0
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
-
-" nvim hack to fix <C-h>
-if has('nvim')
-  nmap <bs> :<c-u>TmuxNavigateLeft<cr>
-endif
 
 " ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting
@@ -488,21 +483,6 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 2
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-      \ 'default' : ''
-    \ }
-
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -516,8 +496,6 @@ endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -525,13 +503,6 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-
-let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 " better key bindings for UltiSnipsExpandTrigger
