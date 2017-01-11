@@ -410,6 +410,10 @@ map <C-w>S :split<CR>
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
+" Add a hack to fix c-h in tmux + nvim on macOS
+" See the [tmux navigator](https://github.com/christoomey/vim-tmux-navigator) readme for more
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
 " C-J and C-K to jump down and up between splits
 map <C-j> <C-w>j
 map <C-k> <C-w>k
