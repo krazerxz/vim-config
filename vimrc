@@ -173,6 +173,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.jar                " D
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " Ignore bundler and sass caches
 set wildignore+=*/tmp/cache/*                                                " Ignore rails temporary asset caches
 set wildignore+=node_modules/*                                               " Ignore node modules
+set wildignore+=deps/*,_build/*                                              " Ignore Elixir & Phoenix deps and build
 set wildignore+=*.swp,*.swo,*~,._*                                           " Disable temp and backup files
 
 " ----------------------------------------------
