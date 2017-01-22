@@ -18,6 +18,7 @@ Plug 'nathanaelkane/vim-indent-guides'                        " Show indentation
 Plug 'regedarek/ZoomWin'                                      " Enable one pane to be fullscreened temporarily
 Plug 'sjl/gundo.vim'                                          " Visualise the undo tree and make it easy to navigate
 Plug 'tpope/vim-repeat'                                       " Make many more operations repeatable with `.`
+Plug 'majutsushi/tagbar'                                      " Adds a sidebar menu for tags in the current file
 
 " Tooling
 Plug 'tpope/vim-dispatch'                                     " Enable async running of tasks
@@ -359,6 +360,9 @@ nnoremap <Leader>u :GundoToggle<CR>
 
 " Replace the default U (undo last line) to Redo for speedyness
 nmap U <c-r>
+
+" Toggle the display of the side bar with tags in
+nnoremap <Leader>] :TagbarToggle<CR>
 
 " Add :w!! to save the current file with sudo
 cmap w!! w !sudo tee > /dev/null %
