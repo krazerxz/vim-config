@@ -733,6 +733,51 @@ endif
 " Tell Gutentags to store tags in .tags by default
 let g:gutentags_tagfile = '.tags'
 
+let g:tagbar_type_ansible = {
+\   'ctagstype' : 'ansible',
+\   'kinds' : [
+\     't:tasks'
+\   ],
+\   'sort' : 0
+\ }
+
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+\   'kinds'     : [
+\     'c:classes',
+\     's:selectors',
+\     'i:identities'
+\   ]
+\ }
+
+let g:tagbar_type_elixir = {
+\ 'ctagstype' : 'elixir',
+\ 'kinds' : [
+\   'f:functions',
+\   'functions:functions',
+\   'c:callbacks',
+\   'd:delegates',
+\   'e:exceptions',
+\   'i:implementations',
+\   'a:macros',
+\   'o:operators',
+\   'm:modules',
+\   'p:protocols',
+\   'r:records'
+\ ]
+\ }
+
+let g:tagbar_type_ruby = {
+\   'kinds' : [
+\     'm:modules',
+\     'c:classes',
+\     'd:describes',
+\     'C:contexts',
+\     'f:methods',
+\     'F:singleton methods',
+\     's:specs'
+\   ]
+\ }
 
 " ----------------------------------------------
 " Setup NERDTree
