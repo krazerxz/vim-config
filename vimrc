@@ -112,7 +112,9 @@ map ,, <leader><leader>
 
 " Set our primary colorscheme. Override this in ~/.vim.local if you want.
 colorscheme adCode
-set termguicolors
+if has("nvim")
+  set termguicolors                     " Use nicer colours in nvim
+endif
 
 set autoindent                          " Automatically indent based on syntax detection
 set autowrite                           " Writes on make/shell commands
