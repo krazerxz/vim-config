@@ -774,10 +774,15 @@ let g:tagbar_type_ruby = {
 \     'm:modules',
 \     'c:classes',
 \     'd:describes',
-\     'C:contexts',
+\     'c:contexts',
+\     'C:constants',
 \     'f:methods',
 \     'F:singleton methods',
-\     's:specs'
+\     's:specs',
+\     'S:scopes',
+\     'a:associations',
+\     'r:relations',
+\     'h:callbacks',
 \   ]
 \ }
 
